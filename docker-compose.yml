@@ -1,8 +1,22 @@
 version: '3.8'
+
 services:
-  image: mas_evenements
+  service1:
+    image: glopcoder/mas_evenements
     ports:
-      - 8080:8080
-  image: mas_participants
+        - 8080:8080
+
+  service2:
+    image: glopcoder/mas_participants
     ports:
-      - 8081:8081
+        - 8081:8081
+
+  service3:
+    image: glopcoder/mas_localisation
+    ports:
+        - 8082:8082
+
+  service4:
+    image: glopcoder/mas_gestionRdv
+    ports:
+        - 8083:8083
