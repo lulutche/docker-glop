@@ -1,25 +1,29 @@
 version: '3.8'
 
 services:
-  service1:
+  mas_evenements:
+    build:
+      context: ../mas_evenements
+      dockerfile: Dockerfile
     image: glopcoder/mas_evenements
     ports:
-        - 8080:8080
+        - "8080:8080"
+    container_name: mas_evenements
 
-  service2:
-    image: glopcoder/mas_participants
-    ports:
-        - 8081:8081
-
-  service3:
+  mas_localisation:
+    build:
+      context: ../mas_localisation
+      dockerfile: Dockerfile
     image: glopcoder/mas_localisation
     ports:
-        - 8082:8082
+        - "8082:8082"
+    container_name: mas_localisation
 
-  service4:
-    image: glopcoder/mas_gestionRdv
+  mas_gestionRdv:
+    build:
+      context: ../mas_gestionRdv
+      dockerfile: Dockerfile
+    image: glopcoder/mas_gestionrdv
     ports:
-        - 8083:8083
-
-
-        
+        - "8083:8083"
+    container_name: mas_gestionrdv
