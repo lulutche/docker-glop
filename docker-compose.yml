@@ -26,4 +26,4 @@ services:
     image: glopcoder/mas_gestionrdv
     ports:
         - "8083:8083"
-    container_name: mas_gestionrdv
+    container_name: mas_gestionRdv
