@@ -23,7 +23,7 @@ services:
     build:
       context: ../mas_gestionRdv
       dockerfile: Dockerfile
-    image: glopcoder/mas_gestionrdv
+    image: glopcoder/mas_gestionRdv
     ports:
         - "8083:8083"
     container_name: mas_gestionRdv
