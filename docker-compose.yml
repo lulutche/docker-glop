@@ -18,3 +18,12 @@ services:
     ports:
         - "8082:8082"
     container_name: mas_localisation
+
+  mas_gestionrdv:
+    build:
+      context: ../mas_gestionrdv
+      dockerfile: Dockerfile
+    image: glopcoder/mas_gestionrdv
+    ports:
+        - "8083:8083"
+    container_name: mas_gestionrdv
