@@ -27,3 +27,12 @@ services:
     ports:
         - "8083:8083"
     container_name: mas_gestionrdv
+
+  mas_notifications:
+      build:
+        context: ../mas_notifications
+        dockerfile: Dockerfile
+      image: glopcoder/mas_notifications
+      ports:
+          - "8084:8084"
+      container_name: mas_notifications
