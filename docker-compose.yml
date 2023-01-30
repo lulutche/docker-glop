@@ -10,6 +10,15 @@ services:
         - "8080:8080"
     container_name: mas_evenements
 
+  mas_participants:
+    build:
+      context: ../mas_participants
+      dockerfile: Dockerfile
+    image: glopcoder/mas_participants
+    ports:
+        - "8081:8081"
+    container_name: mas_participants
+    
   mas_localisation:
     build:
       context: ../mas_localisation
@@ -29,10 +38,10 @@ services:
     container_name: mas_gestionrdv
 
   mas_notifications:
-      build:
-        context: ../mas_notifications
-        dockerfile: Dockerfile
-      image: glopcoder/mas_notifications
-      ports:
-          - "8084:8084"
-      container_name: mas_notifications
+    build:
+      context: ../mas_notifications
+      dockerfile: Dockerfile
+    image: glopcoder/mas_notifications
+    ports:
+        - "8084:8084"
+    container_name: mas_notifications
