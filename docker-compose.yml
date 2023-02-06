@@ -9,6 +9,11 @@ services:
     ports:
         - "8080:8080"
     container_name: mas_evenements
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      SPRING_DATASOURCE_URL: jdbc:oracle:thin:@oracle.fil.univ-lille.fr:1521:filora
+      SPRING_DATASOURCE_USERNAME: GLOP41
+      SPRING_DATASOURCE_PASSWORD: novembre22
 
   mas_participants:
     build:
@@ -18,6 +23,11 @@ services:
     ports:
         - "8081:8081"
     container_name: mas_participants
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      SPRING_DATASOURCE_URL: jdbc:oracle:thin:@oracle.fil.univ-lille.fr:1521:filora
+      SPRING_DATASOURCE_USERNAME: GLOP46
+      SPRING_DATASOURCE_PASSWORD: novembre22
     
   mas_localisation:
     build:
