@@ -1,6 +1,17 @@
 version: '3.8'
 
 services:
+
+  kafka:
+    image: moeenz/docker-kafka-kraft:latest
+    restart: always
+    ports:
+      - "9093:9093"
+    environment:
+      - KRAFT_CONTAINER_HOST_NAME=kafka
+      - KRAFT_CREATE_TOPICS=updateEpreuve, updateCompetition, updateCategorie
+      - KRAFT_PARTITIONS_PER_TOPIC=3
+
   mas_evenements:
     build:
       context: ../mas_evenements
@@ -45,3 +56,12 @@ services:
     ports:
         - "8084:8084"
     container_name: mas_notifications
+
+  mas_authentification:
+      build:
+        context: ../mas_authentification
+        dockerfile: Dockerfile
+      image: glopcoder/mas_authentification
+      ports:
+          - "8085:8085"
+      container_name: mas_authentification
