@@ -1,7 +1,6 @@
 version: '3.8'
 
 services:
-
   kafka:
     image: moeenz/docker-kafka-kraft:latest
     restart: always
@@ -9,7 +8,24 @@ services:
       - "9093:9093"
     environment:
       - KRAFT_CONTAINER_HOST_NAME=kafka
-      - KRAFT_CREATE_TOPICS=updateEpreuve, updateCompetition, updateCategorie
+      - KRAFT_CREATE_TOPICS=updateEpreuve, 
+                            updateCompetition, 
+                            updateCategorie, 
+                            updateAthlete, 
+                            updateTeam, 
+                            updateParticipate,
+                            createEpreuve,
+                            createCategorie,
+                            createCompetition,
+                            createAthlete,
+                            createTeam,
+                            createParticipate,
+                            createLieu,
+                            updateLieu,
+                            createRdv,
+                            updateRdv,
+                            createAgenda,
+                            updateAgenda
       - KRAFT_PARTITIONS_PER_TOPIC=3
 
   mas_evenements:
