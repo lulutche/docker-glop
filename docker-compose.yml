@@ -19,6 +19,11 @@ services:
     image: glopcoder/mas_evenements
     ports:
         - "8080:8080"
+    environment:
+          - SPRING.DATASOURCE.URL=jdbc:oracle:thin:@oracle.fil.univ-lille.fr:1521:filora
+          - SPRING.DATASOURCE.USERNAME=GLOP41
+          - SPRING.DATASOURCE.PASSWORD=novembre22
+          - SPRING_PROFILES_ACTIVE=prod
     container_name: mas_evenements
 
   mas_participants:
@@ -28,6 +33,11 @@ services:
     image: glopcoder/mas_participants
     ports:
         - "8081:8081"
+    environment:
+          - SPRING.DATASOURCE.URL=jdbc:oracle:thin:@oracle.fil.univ-lille.fr:1521:filora
+          - SPRING.DATASOURCE.USERNAME=GLOP46
+          - SPRING.DATASOURCE.PASSWORD=novembre22
+          - SPRING_PROFILES_ACTIVE=prod
     container_name: mas_participants
     
   mas_localisation:
@@ -37,6 +47,11 @@ services:
     image: glopcoder/mas_localisation
     ports:
         - "8082:8082"
+    environment:
+          - SPRING.DATASOURCE.URL=jdbc:oracle:thin:@oracle.fil.univ-lille.fr:1521:filora
+          - SPRING.DATASOURCE.USERNAME=GLOP42
+          - SPRING.DATASOURCE.PASSWORD=novembre22
+          - SPRING_PROFILES_ACTIVE=prod
     container_name: mas_localisation
 
   mas_gestionrdv:
@@ -46,6 +61,11 @@ services:
     image: glopcoder/mas_gestionrdv
     ports:
         - "8083:8083"
+    environment:
+          - SPRING.DATASOURCE.URL=jdbc:oracle:thin:@oracle.fil.univ-lille.fr:1521:filora
+          - SPRING.DATASOURCE.USERNAME=GLOP43
+          - SPRING.DATASOURCE.PASSWORD=novembre22
+          - SPRING_PROFILES_ACTIVE=prod
     container_name: mas_gestionrdv
 
   mas_notifications:
@@ -55,6 +75,11 @@ services:
     image: glopcoder/mas_notifications
     ports:
         - "8084:8084"
+    environment:
+          - SPRING.DATASOURCE.URL=jdbc:oracle:thin:@oracle.fil.univ-lille.fr:1521:filora
+          - SPRING.DATASOURCE.USERNAME=GLOP45
+          - SPRING.DATASOURCE.PASSWORD=novembre22
+          - SPRING_PROFILES_ACTIVE=prod
     container_name: mas_notifications
 
   mas_authentification:
