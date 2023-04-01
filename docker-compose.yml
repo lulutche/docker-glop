@@ -111,3 +111,14 @@ services:
           - SPRING.DATASOURCE.PASSWORD=novembre22
           - SPRING_PROFILES_ACTIVE=prod
       container_name: mas_authentification
+
+  mas_gateway:
+    build:
+      context: ../mas_gateway
+      dockerfile: Dockerfile
+    image: glopcoder/mas_gateway
+    ports:
+        - "8086:8086"
+    environment:
+        - SPRING.KAFKA.BOOTSTRAP-SERVERS=http://172.28.101.165:9093/
+    container_name: mas_gateway
