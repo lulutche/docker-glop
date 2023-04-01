@@ -122,3 +122,5 @@ services:
     environment:
         - SPRING.KAFKA.BOOTSTRAP-SERVERS=kafka:9092
     container_name: mas_gateway
+
+    
