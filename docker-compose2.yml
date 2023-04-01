@@ -11,5 +11,9 @@ services:
       environment:
           - SPRING.KAFKA.BOOTSTRAP-SERVERS=kafka:9092
       container_name: simulateur_producer
+networks:
+  glop_network:
+    external:
+      name: glop_network
 
-      
+

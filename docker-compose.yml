@@ -123,4 +123,7 @@ services:
         - SPRING.KAFKA.BOOTSTRAP-SERVERS=kafka:9092
     container_name: mas_gateway
 
-    
+networks:
+  glop_network:
+    external:
+      name: glop_network
