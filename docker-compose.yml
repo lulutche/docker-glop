@@ -84,19 +84,19 @@ services:
           - SPRING_PROFILES_ACTIVE=prod
     container_name: mas_gestionrdv
 
-  mas_notifications:
-    build:
-      context: ../mas_notifications
-      dockerfile: Dockerfile
-    image: glopcoder/mas_notifications
-    ports:
-        - "8084:8084"
-    environment:
-          - SPRING.DATASOURCE.URL=jdbc:oracle:thin:@oracle.fil.univ-lille.fr:1521:filora
-          - SPRING.DATASOURCE.USERNAME=GLOP45
-          - SPRING.DATASOURCE.PASSWORD=novembre22
-          - SPRING_PROFILES_ACTIVE=prod
-    container_name: mas_notifications
+  #mas_notifications:
+  #  build:
+  #    context: ../mas_notifications
+  #    dockerfile: Dockerfile
+  #  image: glopcoder/mas_notifications
+  #  ports:
+  #      - "8084:8084"
+  #  environment:
+  #        - SPRING.DATASOURCE.URL=jdbc:oracle:thin:@oracle.fil.univ-lille.fr:1521:filora
+  #        - SPRING.DATASOURCE.USERNAME=GLOP45
+  #        - SPRING.DATASOURCE.PASSWORD=novembre22
+  #        - SPRING_PROFILES_ACTIVE=prod
+  #  container_name: mas_notifications
 
   mas_authentification:
       build:
