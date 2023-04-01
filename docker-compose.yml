@@ -120,5 +120,5 @@ services:
     ports:
         - "8086:8086"
     environment:
-        - SPRING.KAFKA.BOOTSTRAP-SERVERS=172.28.101.165:9093/
+        - SPRING.KAFKA.BOOTSTRAP-SERVERS=kafka:9092
     container_name: mas_gateway
