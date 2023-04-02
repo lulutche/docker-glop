@@ -109,10 +109,20 @@ services:
         - SPRING.KAFKA.BOOTSTRAP-SERVERS=kafka:9092
     container_name: mas_gateway
 
-networks:
-  glop_network:
-    external:
-      name: glop_network
+  simulateur_producer:
+      build:
+        context: ../simulateur_producer
+        dockerfile: Dockerfile
+      image: glopcoder/simulateur_producer
+      ports:
+          - "3030:3030"
+      environment:
+          - SPRING.KAFKA.BOOTSTRAP-SERVERS=kafka:9092
+      container_name: simulateur_producer
+#networks:
+#  glop_network:
+#    external:
+#      name: glop_network
 
   #mas_notifications:
   #  build:
